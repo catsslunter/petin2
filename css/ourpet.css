@@ -1,0 +1,303 @@
+html.fssopen, html.fssopen body{ /* class added to HTML element when full screen slider is open to hide potential body scrollbars */
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+  margin: 0;
+	overflow: hidden;
+}
+
+section.dd_fullscreenslider{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+  z-index: 2000;
+	font-size: 16px; /* base font size */
+	visibility: visible;
+	overflow: hidden;
+}
+
+div.slidewrapper{ /* wrapper DIV that surrounds the ARTICLE elements inside .dd_fullscreenslider */
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-transform: translate3d(0, 0, 0); /* to prevent flickering in iOS */
+	-moz-transition: -moz-transform 0.5s; /* actual duration controlled by script */
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.header{
+    height: 73px;
+    width: 100%;
+    background-color: #393735;
+    position: fixed;
+    left: 0;
+    top:0;
+    z-index: 3000;
+}
+.header_in{
+    height: 73px;
+    width: 1200px;
+    margin: 0 auto ;
+
+}
+.header_in .logo{
+    float: left;
+}
+
+.header_in ul{
+    width: 800px;
+    text-align:right;
+    float: right;
+}
+.header_in li{
+    float: left;
+    font-size: 20px;
+    line-height: 73px;
+    text-align: center;
+    font-weight: 400;
+    /* padding-left: 500px;*/
+}
+.header_in ul li a{
+    color: #f6f6f6;
+    display: block;
+    width: 138px;
+    height: 70px;
+    /* text-align: center;*/
+}
+.header_in ul li .active{
+    border-bottom: 3px solid #e56539 ;
+    color: #e56539;
+
+}
+.header_in ul li a:hover{
+    border-bottom: 3px solid #e56539 ;
+    color: #e56539;
+    transition: all 0.5s;
+}
+
+#dowebok .slide h3{
+    position: relative;
+    top: 20%;
+    left: 60%;
+    font: 900 100px 'Helvetica Neue Condens...';
+    font-weight: bold;
+}
+
+#dowebok .slide h5{
+     position: relative;
+     top: 26%;
+     left: 60%;
+     font: 400 42px '苹方-简 极细体';
+ }
+
+#dowebok .slide p{
+    position: relative;
+    top: 28%;
+    left: 60%;
+    font: 200 16px '苹方-简 极细体';
+    line-height: 34px;
+}
+
+#dowebok .slide .left.word3{
+    position: relative;
+    top: 20%;
+    left: 10%;
+    font: 900 100px 'Helvetica Neue Condens...';
+    font-weight: bold;
+}
+
+#dowebok .slide .left.word5{
+    position: relative;
+    top: 26%;
+    left: 10%;
+    font: 400 42px '苹方-简 极细体';
+}
+
+#dowebok .slide .left.wordp{
+    position: relative;
+    top: 28%;
+    left: 10%;
+    font: 200 16px '苹方-简 极细体';
+    line-height: 34px;
+}
+.cta--button--container{
+    position: relative;
+    top: 39%;
+    left: 60%;
+}
+.cta--button--container2{
+    position: relative;
+    top: 39%;
+    left: 10%;
+}
+.btn-divi{
+    display: inline-block;
+    border-radius: 100px;
+    background: linear-gradient(180deg, #ff794b 0%, #fe5a22 100%);
+    color: white;
+    padding: 18px 60px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 15px;
+    border:none;
+}
+
+.btn-divi:hover{
+    color: #333;
+}
+ul.fssnav{ /* UL list dynamically added by script for Slider navigation */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+	position: fixed;
+	top: 60%; /* vertically center menu */
+	right:50%; /* distance from right edge of screen */
+	transform: translateY(-50%); /* vertically center menu */
+}
+ul.fssnav::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height:888px;
+    background-color:rgba(255,255,255,0.5);
+    position: fixed;
+    top:-16%;
+    left:50%;
+}
+
+ul.fssnav li{
+  margin-bottom: 800%;
+}
+
+
+ul.fssnav li a{
+  text-decoration: none;
+  border: 2px solid white; /* border color of nav links */
+  border-radius: 50%;
+  width: 6px; /* dimensions of nav links */
+  height: 6px;
+  display: block;
+	position: relative;
+  text-indent: -500px;
+	outline: none;
+  overflow: hidden;
+}
+
+
+ul.fssnav li a::after{ /* create "fill" element inside A */
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  left: 0;
+  background: white; /* color of "fill" element */
+  transition: top 0.5s; /* transition for "fill up" effect */
+}
+
+ul.fssnav li.selected a::after{
+  top: 0; /* fill up selected A element from bottom to top */
+}
+
+
+section.dd_fullscreenslider article.slide{ /* CSS for each slide */
+  width: 100%;
+  height: 100%;
+	display: block;
+	font-family: 'Lato', sans-serif; /* Use google font */
+	font-size: 1.2em;
+	line-height: 2em;
+	color: white;
+	overflow: hidden;
+  -webkit-box-sizing: border-box; /* include padding/ border as part of declared menu width */
+  -moz-box-sizing: border-box;
+	/*z-index: 1000;*/
+  background-image: url("../images/ourpet5.jpg");
+    background-size: cover;
+	-webkit-transform: translate3d(0, 0, 0); /* to prevent flickering in iOS */
+}
+
+section.dd_fullscreenslider article.slide h2{ /* H2 Header inside each slide */
+	font-size: 3em;
+	margin: 0;
+	line-height: 1.1em;
+	letter-spacing: 3px;
+}
+
+section.dd_fullscreenslider article.slide .scrollable{ /* Assign this class to elements within a slide that should be scrollable */
+	overflow: auto;
+}
+
+section.dd_fullscreenslider article.slide a{
+	color: yellow;
+}
+
+section.dd_fullscreenslider article.slide:nth-of-type(1){ /* 1nd demo slide bgcolor */
+    background-image: url("../images/ourpet1.jpg");
+    background-size: cover;
+}
+
+
+section.dd_fullscreenslider article.slide:nth-of-type(2){ /* 2nd demo slide bgcolor */
+	background-image: url("../images/ourpet2.jpg");
+    background-size: cover;
+}
+
+section.dd_fullscreenslider article.slide:nth-of-type(3){ /* 3rd demo slide bgcolor */
+    background-image: url("../images/ourpet3.jpg");
+    background-size: cover;
+}
+
+section.dd_fullscreenslider article.slide:nth-of-type(4){ /* 4th demo slide bgcolor */
+    background-image: url("../images/ourpet4.jpg");
+    background-size: cover;
+}
+
+section.dd_fullscreenslider div.closex{ /* Large x close button inside Slider */
+  width: 50px;
+  height: 50px;
+	overflow: hidden;
+  display: block;
+  position: fixed;
+  cursor: pointer;
+	text-indent: -1000px;
+	opacity: 0.8;
+  z-index: 1001;
+  top: 5px;
+  right: 3px;
+}
+
+section.dd_fullscreenslider div.closex::before, section.dd_fullscreenslider div.closex::after{ /* render large x inside close button */
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  background: white; /* color of x button */
+  top: 50%;
+  margin-top: -3px;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+section.dd_fullscreenslider div.closex::after{ /* render large cross inside close button */
+  -ms-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}

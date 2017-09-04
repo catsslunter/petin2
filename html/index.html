@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>首页</title>
+<link rel="stylesheet" href="../css/index.css">
+<link href="../css/font-awesome.css" rel="stylesheet " type="text/css">
+
+<style>
+#menu { margin: 0; padding: 0; position: fixed; left: 10px; top: 10px; list-style-type: none; z-index: 70;}
+#menu li { float: left; margin:  0 10px 0 0; font-size: 14px;}
+#menu a { float: left; padding: 10px 20px; background-color: #fff; color: #333; text-decoration: none;}
+#menu .active a { color: #fff; background-color: #333;}
+.section { text-align: left;  "pin"; color: #fff;}
+</style>
+<script src="../js/jquery-1.8.3.min.js"></script>
+<script src="../js/jquery.fullPage.min.js"></script>
+<script>
+$(function(){
+	$('#dowebok').fullpage({
+		sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+		anchors: ['page1', 'page2', 'page3', 'page4'],
+		menu: '#menu',
+        'navigation': true
+	});
+});
+</script>
+</head>
+
+<body>
+<div class="header">
+	<div class="header_in">
+		<div class="logo"><a href="#"><img src="../images/logo_02.jpg" align="top"></a>  </div>
+		<div class="nav">
+			<ul>
+				<li><a href="index.html" class="active">首页</a></li>
+				<li><a href="ourpet.html">我们的宠物</a></li>
+				<li><a href="our%20service.html">我们的服务</a></li>
+				<li><a href="our member.html">我们的会员</a></li>
+				<li><a href="#">联系我们</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<ul id="menu">
+	<li data-menuanchor="page1" class="active"><a href="#page1">第一屏</a></li>
+	<li data-menuanchor="page2"><a href="#page2">第二屏</a></li>
+	<li data-menuanchor="page3"><a href="#page3">第三屏</a></li>
+	<li data-menuanchor="page4"><a href="#page4">第四屏</a></li>
+</ul>
+
+<div id="dowebok">
+	<div class="section section1">
+		<h3>我们的商品选择
+			<span class="box-title-line"></span>
+		</h3>
+		<h4>琳琅满目的商品选择</h4>
+		<p>满足您一站式购物需求<br>
+			2000多款来自世界各地的宠物商品满足<br>
+			宠物衣食住行所需<br>
+			精挑细选知名品牌确保商品质量<br>
+			直接厂家进货，确保价格优势<br>
+			新颖的促销活动，彰显购物乐趣<br>
+			丰满有序的商品成列更加便于自主选择</p>
+		<div class="cta--button--container">
+			<a href="https://secure.divipay.com/signup/?ref=divipay.com&amp;a=button">
+				<button class="btn-divi">了解更多</button>
+			</a>
+		</div>
+	</div>
+	<div class="section section2">
+		<h3 class="wword">我们的明星宠物</h3>
+			<span class="box-title-line2"></span>
+		<h4 class="wword">为你带来欢乐的宠物</h4>
+		<p 	class="wwordp">为你找到守护一生的伴侣<br>
+			按照您的需求推荐最适合饲养的宠物<br>
+			24h退还政策是对您和爱宠的双向保障<br>
+			为流浪和弃养宠物寻觅家的港湾</p>
+		<div class="cta--button--container2">
+			<a href="ourpet.html">
+				<button class="btn-divi">查看更多</button>
+			</a>
+		</div>
+	</div>
+	<div class="section section3">
+		<h3>美容洗护和造型体验</h3>
+			<span class="box-title-line3"></span>
+		<h4>彰显个性的度身定制</h4>
+		<p>丰富的美容护理项目，不仅满足宠物基本毛发<br>
+			清洁，还能根据不同毛发状况度身定制护理方<br>
+			案，时刻保持健康亮泽</p>
+		<div class="cta--button--container">
+			<a href="https://secure.divipay.com/signup/?ref=divipay.com&amp;a=button">
+				<button class="btn-divi">换个造型</button>
+			</a>
+		<div class="line3"></div>
+		</div>
+	</div>
+	<div class="section section4">
+		<h3 class="wword">我们的宠物宝贝</h3>
+		<span class="box-title-line2"></span>
+		<h4 class="wwordh">为你找到守护一生的伴侣</h4>
+		<p 	class="wwordp">为你找到守护一生的伴侣<br>
+			按照您的需求推荐最适合饲养的宠物<br>
+			24h退还政策是对您和爱宠的双向保障<br>
+			为流浪和弃养宠物寻觅家的港湾</p>
+		<div class="cta--button--container2">
+			<a href="https://secure.divipay.com/signup/?ref=divipay.com&amp;a=button">
+				<button class="btn-divi">加入会员</button>
+			</a>
+		</div>
+
+		<!--<div class="footer"></div>-->
+	</div>
+	<div class="footer"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<a href="http://www.dowebok.com/" style="display: none;">dowebok</a>
+<a href="http://www.dowebok.com/77.html" style="display: none;">jQuery全屏滚动插件fullPage.js</a>
+
+</body>
+</html>
